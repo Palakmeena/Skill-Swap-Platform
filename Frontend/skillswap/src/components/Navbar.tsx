@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const navLinks = [
-  { name: "About", href: "/about" },
-  { name: "Events", href: "/events" },
+  { name: "Home", href: "/about" },
+  { name: "Find Swap", href: "/events" },
   { name: "Announcements", href: "/announcements" },
 ];
 
@@ -43,13 +43,13 @@ export default function Navbar() {
         {/* Right: Auth Buttons */}
         <div className="flex items-center gap-4">
           <Link
-            href="/signup"
+            href="/sign-up"
             className="px-4 py-2 bg-black text-white rounded-md text-sm font-medium hover:scale-105 transition-transform"
           >
             Sign Up
           </Link>
           <Link
-            href="/login"
+            href="/sign-in"
             className="text-sm text-black font-medium hover:underline"
           >
             Sign In
