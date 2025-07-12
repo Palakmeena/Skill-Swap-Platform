@@ -66,6 +66,10 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
+    public User findByClerkId(String clerkId) {
+        return userRepository.findByClerkId(clerkId);
+    }
+
     public User save(User user) {
         return userRepository.save(user);
     }

@@ -10,12 +10,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false)
-    private String password;
+    @Column(unique = true)
+    private String clerkId;
+
+    @Column
+    private String password; // Optional since Clerk handles auth
 
     public String getEmail() {
         return email;
@@ -23,6 +25,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getClerkId() {
+        return clerkId;
+    }
+
+    public void setClerkId(String clerkId) {
+        this.clerkId = clerkId;
     }
 
     public String getPassword() {
