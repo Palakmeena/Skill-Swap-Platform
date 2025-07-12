@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
+/* Define custom color variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-main: #20B2AA;          /* Teal (Main) */
+  --color-highlight: #FF7F50;     /* Coral (Highlight) */
+  --color-support: #87CEEB;       /* Sky Blue (Support) */
+  --color-background: #F5F5F5;    /* Warm Gray (Background) */
+  --color-text: #1F2937;          /* Charcoal (Text) */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+/* Optional: Dark mode handling (if needed) */
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-background: #006aff;
+    --color-text: #F5F5F5;
+    --color-main: #20B2AA;
+    --color-highlight: #FF7F50;
+    --color-support: #87CEEB;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-background);
+  color: var(--color-text);
   font-family: Arial, Helvetica, sans-serif;
 }
